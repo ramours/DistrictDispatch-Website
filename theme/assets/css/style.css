@@ -1,0 +1,438 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://Alvarez.is
+ *
+ * Project Name: NYC Design
+ * Version: 1.0
+ * Date: 04-20-2014
+ * URL: 
+ */
+
+
+/* ==========================================================================
+   Base Styles, Bootstrap Modifications & Fonts Import
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+::-moz-selection {
+    background: #f2c2c9;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+.mt {
+	margin-top: 80px;
+}
+
+.mb {
+	margin-bottom: 80px;
+}
+
+.no-flick {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translateZ(0) 
+}
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+    color: #4a4a4a;
+}
+
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+.navbar-default .navbar-brand {
+	color: #1abc9c;
+}
+
+.navbar-default {
+	/*background-color: transparent;*/
+	background-color: #ffffff;
+	border-color: transparent;
+	padding-bottom: 8px;
+	
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #1abc9c;
+	background-color: transparent;
+	border-bottom: 2px solid #1abc9c
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #1abc9c;
+
+	-webkit-transition-property: color;
+  	-webkit-transition-duration: 0.2s;
+  	-webkit-transition-timing-function: ease-out;
+}
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+	background: 
+		linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ),
+	url(../img/yellowCab.jpg) no-repeat center top;
+
+	margin-top: 60px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: fixed;
+	background-position: center center;
+	min-height: 750px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap :hover {
+}
+
+#headerwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#headerwrap h2 {
+	font-size: 25px;
+
+	margin-top: -10px;
+	font-weight: 400;
+	color: #ffffff
+}
+
+#headerwrap p {
+	color:#ffffff;
+	padding-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#headerwrap input {
+  	margin-top: 30px;
+
+	opacity: 1.0;
+  	-webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-out;
+}
+
+#headerwrap input:hover {
+	opacity: 0.8;
+	-webkit-backface-visibility: hidden;
+
+	-webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-out;
+
+	/*background: url(../img/yellowCab.jpg) no-repeat center top;*/
+}
+
+/*#headerwrap input:active {
+	opacity: 0.9;
+	background: url(../img/yellowCab.jpg) no-repeat center top;
+}*/
+
+#description {
+}
+
+#social {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f2f2f2;
+}
+
+#social i {
+	font-size: 40px;
+	color: #4a4a4a
+}
+
+#social i:hover {
+	color: #1abc9c
+}
+
+#footerwrap {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	background-color: #2f2f2f;
+}
+
+#footerwrap p {
+	color: #f2f2f2;
+	margin-left: 10px;
+	font-size: 14px;
+	/*margin-top: 20px;*/
+}
+
+#footerwrap h3 {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+#footerwrap input {
+  	margin-top: 30px;
+  	margin-bottom: 30px;
+}
+
+#footerwrap input:hover {
+	opacity: 0.8;
+
+	-webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.2s;
+  	-webkit-transition-timing-function: ease-out;
+
+	/*background: url(../img/yellowCab.jpg) no-repeat center top;*/
+}
+
+#workwrap {	
+	background: 
+		linear-gradient(
+		rgba(0, 0, 0, 0.6), 
+		rgba(0, 0, 0, 0.6)
+	),
+	url(../img/bigDsEastwood.jpg) no-repeat center top;
+
+	margin-top: 60px;
+	padding-top: 270px;
+	text-align:center;
+	background-attachment: absolute;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+
+	/*-webkit-filter: grayscale(1);*/
+	-webkit-filter: grayscale(100%);
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#workwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#workwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#workwrap img {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#aboutwrap {	
+	background: 
+		linear-gradient(
+		rgba(0, 0, 0, 0.6), 
+		rgba(0, 0, 0, 0.6)
+	),
+    url(../img/quartierItaly.jpg) no-repeat center top;
+
+	margin-top: 60px;
+	padding-top: 60px;
+	text-align:center;
+	background-attachment: fixed;
+	background-position: center center;
+	min-height: 550px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#aboutwrap h1, h2, h3, p {
+	color: #ffffff;
+}
+
+#aboutwrap h2 {
+	font-family: 'American typewriter', sans-serif;
+	font-size: 23px;
+	margin-top: 20px;
+	font-weight: 400;
+}
+
+.come-in {
+  -webkit-transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { 
+  	/*transform: translateY(0); */
+  	-webkit-transform: translateY(0px);
+  }
+}
+
+/* Gallery */
+.gallery {
+	margin-top: 30px;
+	opacity: 0.0;
+
+	/* Translate and Rotate the gallery by default to allow for transparency and rotation when in view */
+	/*transform: translateY(40px);*/
+	-webkit-transform: translateY(40px);
+	/*transform: rotateY(40deg);*/
+
+	/*animation: come-in 0.8s ease forwards;*/
+}
+
+.gallery img {
+	-webkit-transition: all 0.4s ease-in-out; 
+	-moz-transition: all 0.4s ease-in-out; 
+	-ms-transition: all 0.4s ease-in-out; 
+	-o-transition: all 0.4s ease-in-out; 
+	transition: all 0.4s ease-in-out; 
+
+	/*width: 90%;
+	top: 0;
+	left: 0;
+	right: 0;*/
+}
+
+.gallery img:hover {
+
+	-webkit-opacity: 0.8;
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+
+	/*opacity: 0.4;
+
+	-webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.2s;
+  	-webkit-transition-timing-function: ease-out;*/
+}
+
+/* Swap images to reveal the categorie when mouse hover */
+.swap1 { 
+	-webkit-opacity: 1; 
+	-moz-opacity: 1; 
+	opacity: 1; 
+}
+
+.swap2 { 
+	-webkit-opacity: 0.0; 
+	-moz-opacity: 0.0; 
+	opacity: 0.0; 
+
+	position:relative;
+}
+
+/*.swap1, .swapMe:hover .swap2 { 
+	-webkit-opacity: 0.6; 
+	-moz-opacity: 0.6; 
+	opacity: 0.6; 
+}*/
+
+/*.swapMe:hover .swap1, .swap2 { 
+	-webkit-opacity: 0.0;
+	-moz-opacity: 0.0;
+	opacity: 0.0;
+}*/
+
+/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
+/* Effects also are controled by hover.zoom.js */
+.zoom { 
+    display:block; 
+    position:relative; 
+    overflow:hidden; 
+    background:transparent url(../img/loader.gif) no-repeat center;
+}
+
+
+.zoomOverlay {
+    position:absolute;
+    top:0; left:0;
+    bottom:0; right:0;
+    display:none;
+    background-image:url(../img/zoom.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.zoom2 {
+	opacity: 1;
+}
+
+.zoom2:hover {
+	opacity: 0.5;
+}
