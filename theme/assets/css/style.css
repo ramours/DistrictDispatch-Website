@@ -437,9 +437,9 @@ h1, h2, h3, h4, h5, h6 {
 	-ms-transition: all 0.8s ease-in-out; 
 	-o-transition: all 0.8s ease-in-out; 
 	transition: all 0.8s ease-in-out; 
-}*/
+}
 
-/*.gallery img:hover {
+.gallery img:hover {
 	-webkit-opacity: 0.8;
 	-moz-opacity: 0.8;
 	opacity: 0.8;
@@ -478,10 +478,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Label configuration -------------------------------------------------------------- */
 .viewport a span {
-    display: none;
+    
     /*font-size: 3.0em;*/
+
+    /* When NOT displaying the text on top of the image in the gallery*/
+    display: none;
     font-size: 180%;
     font-weight: bold;
+
+    /* When displaying the text on top of the image in the gallery*/
+    font-size: 120%; 
+    
     padding-top: 20%;
     position: absolute;
     text-align: center;
@@ -499,9 +506,27 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+/* When displaying the text on top of the image in the gallery*/
+/*.viewport span {
+	-webkit-transition: all 0.2s ease-in-out; 
+	-moz-transition: all 0.2s ease-in-out; 
+	-ms-transition: all 0.2s ease-in-out; 
+	-o-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out; 
+}
+
+.viewport span:hover {
+	background-color: rgba(15, 15, 15, 0.7);
+}*/
+
 /* --- Dark hover background ------------------------------------------------------------ */
 .dark-background {
+	/* When NOT displaying the text on top of the image in the gallery*/
     background-color: rgba(15, 15, 15, 0.6);
+
+    /* When displaying the text on top of the image in the gallery*/
+    /*background-color: rgba(15, 15, 15, 0.2);*/
+
     color: #fff;
     text-shadow: #000 0px 0px 20px;
 }
@@ -509,33 +534,6 @@ h1, h2, h3, h4, h5, h6 {
 .dark-background em {
     color: #ccc;
 }
-
-/* Swap images to reveal the category when mouse hover */
-/*.swap1 { 
-	-webkit-opacity: 1; 
-	-moz-opacity: 1; 
-	opacity: 1; 
-}
-
-.swap2 { 
-	-webkit-opacity: 0.0; 
-	-moz-opacity: 0.0; 
-	opacity: 0.0; 
-
-	position:relative;
-}*/
-
-/*.swap1, .swapMe:hover .swap2 { 
-	-webkit-opacity: 0.6; 
-	-moz-opacity: 0.6; 
-	opacity: 0.6; 
-}*/
-
-/*.swapMe:hover .swap1, .swap2 { 
-	-webkit-opacity: 0.0;
-	-moz-opacity: 0.0;
-	opacity: 0.0;
-}*/
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
