@@ -1,4 +1,7 @@
 /*
+ * Modified project by David Ramos
+ *
+ * Orginal project:
  * Author: Carlos Alvarez
  * URL: http://Alvarez.is
  *
@@ -128,11 +131,6 @@ h1, h2, h3, h4, h5, h6 {
 	background-position: center center;
 	min-height: 750px;
 	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -140,7 +138,66 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
-#headerwrap :hover {
+#headerwrap:hover h1 {
+	/*-webkit-animation: animatedBackground 1s ease-out 1;
+	-moz-animation: animatedBackground 1s ease-out 1;
+	animation: animatedBackground 1s ease-out 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;*/
+}
+
+@-webkit-keyframes animatedBackground {
+	0% {
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1)
+	}
+	100% {
+		-webkit-transform: scale(1.03, 1.03);
+		-moz-transform: scale(1.03, 1.03);
+		-ms-transform: scale(1.03, 1.03);
+		-o-transform: scale(1.03, 1.03);
+		transform: scale(1.03, 1.03)
+	}
+
+}
+
+
+@-moz-keyframes animatedBackground {
+	0% {
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1)
+	}
+	100% {
+		-webkit-transform: scale(1.1, 1.1);
+		-moz-transform: scale(1.1, 1.1);
+		-ms-transform: scale(1.1, 1.1);
+		-o-transform: scale(1.1, 1.1);
+		transform: scale(1.1, 1.1)
+	}
+
+}
+@keyframes animatedBackground {
+	0% {
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1)
+	}
+	100% {
+		-webkit-transform: scale(1.1, 1.1);
+		-moz-transform: scale(1.1, 1.1);
+		-ms-transform: scale(1.1, 1.1);
+		-o-transform: scale(1.1, 1.1);
+		transform: scale(1.1, 1.1)
+	}
+
 }
 
 #headerwrap h1 {
@@ -241,6 +298,15 @@ h1, h2, h3, h4, h5, h6 {
 	/*background: url(../img/yellowCab.jpg) no-repeat center top;*/
 }
 
+#footerwrap:hover h2 {
+
+	/*-webkit-animation: animatedBackground 1s ease-out 1;
+	-moz-animation: animatedBackground 1s ease-out 1;
+	animation: animatedBackground 1s ease-out 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;*/
+}
+
 #workwrap {	
 	background: 
 		linear-gradient(
@@ -321,10 +387,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #aboutwrap h2 {
-	font-family: 'American typewriter', sans-serif;
+	/*font-family: 'American typewriter', sans-serif;*/
 	font-size: 23px;
 	margin-top: 20px;
 	font-weight: 400;
+	text-align:left;
+}
+
+#aboutwrap:hover h1 {
+	/*-webkit-animation: animatedBackground 1s ease-out 1;
+	-moz-animation: animatedBackground 1s ease-out 1;
+	animation: animatedBackground 1s ease-out 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;*/
 }
 
 .come-in {
@@ -356,34 +431,87 @@ h1, h2, h3, h4, h5, h6 {
 	/*animation: come-in 0.8s ease forwards;*/
 }
 
-.gallery img {
-	-webkit-transition: all 0.4s ease-in-out; 
-	-moz-transition: all 0.4s ease-in-out; 
-	-ms-transition: all 0.4s ease-in-out; 
-	-o-transition: all 0.4s ease-in-out; 
-	transition: all 0.4s ease-in-out; 
+/*.gallery img {
+	-webkit-transition: all 0.8s ease-in-out; 
+	-moz-transition: all 0.8s ease-in-out; 
+	-ms-transition: all 0.8s ease-in-out; 
+	-o-transition: all 0.8s ease-in-out; 
+	transition: all 0.8s ease-in-out; 
+}*/
 
-	/*width: 90%;
-	top: 0;
-	left: 0;
-	right: 0;*/
-}
-
-.gallery img:hover {
-
+/*.gallery img:hover {
 	-webkit-opacity: 0.8;
 	-moz-opacity: 0.8;
 	opacity: 0.8;
+}*/
 
-	/*opacity: 0.4;
-
-	-webkit-transition-property: opacity;
-  	-webkit-transition-duration: 0.2s;
-  	-webkit-transition-timing-function: ease-out;*/
+/* --- Container configuration ---------------------------------------------------------- */
+.viewport {
+    /*border: 3px solid #eee;*/
+    /*float: left;*/
+    /*height: 299px;
+    margin: 0 9px 9px 0;*/
+    overflow: hidden;
+    /*position: relative;*/
+    /*width: 450px;*/
 }
 
-/* Swap images to reveal the categorie when mouse hover */
-.swap1 { 
+/* This is so that the 2nd thumbnail in each row fits snugly. You will want to add a similar
+   class to the last thumbnail in each row to get rid of the margin-right. */
+/*.no-margin {
+    margin-right: 0;
+}*/
+
+/* --- Link configuration that contains the image and label ----------------------------- */
+/*.viewport a {
+    display: block;
+    position: relative;
+}*/
+
+/*.viewport a img {
+    height: 332px;
+    left: -20px;
+    position: relative;
+    top: -20px;
+    width: 500px;
+}*/
+
+/* --- Label configuration -------------------------------------------------------------- */
+.viewport a span {
+    display: none;
+    /*font-size: 3.0em;*/
+    font-size: 180%;
+    font-weight: bold;
+    padding-top: 20%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+.viewport a span em {
+    display: block;
+    font-size: 0.45em;
+    font-weight: normal;
+}
+
+/* --- Dark hover background ------------------------------------------------------------ */
+.dark-background {
+    background-color: rgba(15, 15, 15, 0.6);
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+}
+
+.dark-background em {
+    color: #ccc;
+}
+
+/* Swap images to reveal the category when mouse hover */
+/*.swap1 { 
 	-webkit-opacity: 1; 
 	-moz-opacity: 1; 
 	opacity: 1; 
@@ -395,7 +523,7 @@ h1, h2, h3, h4, h5, h6 {
 	opacity: 0.0; 
 
 	position:relative;
-}
+}*/
 
 /*.swap1, .swapMe:hover .swap2 { 
 	-webkit-opacity: 0.6; 

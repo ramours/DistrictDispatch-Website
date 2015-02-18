@@ -1,3 +1,14 @@
+// Let's get rid of this code and put it in the css as soon as it works
+$(document).ready(function() {
+    $('.viewport').mouseenter(function(e) {
+        // $(this).children('a').children('img').animate({ height: '299', left: '0', top: '0', width: '450'}, 100);
+        $(this).children('a').children('span').fadeIn(300);
+    }).mouseleave(function(e) {
+        // $(this).children('a').children('img').animate({ height: '332', left: '-20', top: '-20', width: '500'}, 100);
+        $(this).children('a').children('span').fadeOut(300);
+    });
+});
+
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
