@@ -7,6 +7,21 @@ $(document).ready(function() {
         // $(this).children('a').children('img').animate({ height: '332', left: '-20', top: '-20', width: '500'}, 100);
         $(this).children('a').children('span').fadeOut(300);
     });
+    
+    function centerImage() {
+      var container = $('#aboutwrap');
+      var height = container.outerHeight();
+      container.children(".overlay").css("min-height", height);
+    }
+
+    $(window).on("load resize", centerImage);
+     
+    var el = document.getElementById('aboutwrap');
+    if (el.addEventListener) {  
+        el.addEventListener("webkitTransitionEnd", centerImage, false); // Webkit event
+        el.addEventListener("transitionend", centerImage, false); // FF event
+        el.addEventListener("oTransitionEnd", centerImage, false); // Opera event
+    }
 });
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -30,7 +45,7 @@ $(window).scroll(function(){
     }
     var firstElementPos = $('.gallery:first').position().top;
     var lastElementPos = $('.gallery:last').position().top;
-    var offsetY = 800;
+    var offsetY = 600;
     var shouldBeVisible = $(window).scrollTop() > (firstElementPos - offsetY) && $(window).scrollTop() < lastElementPos;
     if (shouldBeVisible && !isVisible) {
       isVisible = true;

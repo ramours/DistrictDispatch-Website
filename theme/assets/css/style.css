@@ -112,6 +112,73 @@ h1, h2, h3, h4, h5, h6 {
   	-webkit-transition-timing-function: ease-out;
 }
 
+#rectangle {
+	width: 160px;
+    height: 80px;
+    background-color: none;
+    display: table;
+	border: 3px solid #fd8e2a;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */
+    -moz-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	text-align:center;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	-webkit-transition-property: background-color;
+  	-webkit-transition-duration: 0.2s;
+  	-webkit-transition-timing-function: ease-out;
+}
+
+#rectangle:hover {
+	background-color: #fd8e2a;
+
+  	-webkit-transition-property: background-color;
+  	-webkit-transition-duration: 0.2s;
+  	-webkit-transition-timing-function: ease-out;
+}
+
+#rectangle a {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-weight: bold;
+}
+
+/* responsive text queries */
+/*@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 90%;
+  }
+  h1 {
+    font-size: 20px;  
+  }
+  h2 {
+    font-size: 18px;  
+  }
+  h3 {
+    font-size: 16px;  
+  }
+}*/
+
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
@@ -125,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 	url(../img/yellowCab.jpg) no-repeat center top;
 
 	margin-top: 60px;
-	padding-top: 250px;
+	padding-top: 220px;
 	text-align:center;
 	background-attachment: fixed;
 	background-position: center center;
@@ -138,66 +205,85 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
+#headerwrap a {
+	text-decoration: none;
+}
+
+#headerwrap h1 {
+	-webkit-transform: translate(0px, -40px);
+    -moz-transform: translate(0px, -40px);
+    -o-transform: translate(0px, -40px);
+    -ms-transform: translate(0px, -40px);
+    transform: translate(0px, -40px);
+
+	-webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
 #headerwrap:hover h1 {
-	/*-webkit-animation: animatedBackground 1s ease-out 1;
-	-moz-animation: animatedBackground 1s ease-out 1;
-	animation: animatedBackground 1s ease-out 1;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;*/
+	-webkit-transform: translate(0px, -20px);
+    -moz-transform: translate(0px, -20px);
+    -o-transform: translate(0px, -20px);
+    -ms-transform: translate(0px, -20px);
+    transform: translate(0px, -20px);
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes animatedBackground {
-	0% {
-		-webkit-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1)
-	}
-	100% {
-		-webkit-transform: scale(1.03, 1.03);
-		-moz-transform: scale(1.03, 1.03);
-		-ms-transform: scale(1.03, 1.03);
-		-o-transform: scale(1.03, 1.03);
-		transform: scale(1.03, 1.03)
-	}
+#headerwrap > .overlay {
+	position: absolute;
+	background-color: #000;
+	opacity: 0.5;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
 
+	margin-top: 60px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: fixed;
+	background-position: center center;
+	min-height: 750px;
+	width: 100%;
+
+    -webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
 }
 
+#headerwrap:hover > .overlay {
+	opacity: 0.0;
 
-@-moz-keyframes animatedBackground {
-	0% {
-		-webkit-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1)
-	}
-	100% {
-		-webkit-transform: scale(1.1, 1.1);
-		-moz-transform: scale(1.1, 1.1);
-		-ms-transform: scale(1.1, 1.1);
-		-o-transform: scale(1.1, 1.1);
-		transform: scale(1.1, 1.1)
-	}
-
+    -webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
 }
-@keyframes animatedBackground {
-	0% {
-		-webkit-transform: scale(1, 1);
-		-moz-transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-o-transform: scale(1, 1);
-		transform: scale(1, 1)
-	}
-	100% {
-		-webkit-transform: scale(1.1, 1.1);
-		-moz-transform: scale(1.1, 1.1);
-		-ms-transform: scale(1.1, 1.1);
-		-o-transform: scale(1.1, 1.1);
-		transform: scale(1.1, 1.1)
-	}
 
+#headerwrap #rectangle {
+	-webkit-transform: translate(0px, 30px);
+    -moz-transform: translate(0px, 30px);
+    -o-transform: translate(0px, 30px);
+    -ms-transform: translate(0px, 30px);
+    transform: translate(0px, 30px);
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
+#headerwrap:hover #rectangle {
+	-webkit-transform: translate(0px, 5px);
+    -moz-transform: translate(0px, 5px);
+    -o-transform: translate(0px, 5px);
+    -ms-transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
 }
 
 #headerwrap h1 {
@@ -222,12 +308,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-#headerwrap input {
+/*#headerwrap input {
   	margin-top: 30px;
 
 	opacity: 1.0;
   	-webkit-transition-property: opacity;
-  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-duration: 0.2s;
   	-webkit-transition-timing-function: ease-out;
 }
 
@@ -236,11 +322,11 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-backface-visibility: hidden;
 
 	-webkit-transition-property: opacity;
-  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-duration: 0.2s;
   	-webkit-transition-timing-function: ease-out;
 
 	/*background: url(../img/yellowCab.jpg) no-repeat center top;*/
-}
+}*/
 
 /*#headerwrap input:active {
 	opacity: 0.9;
@@ -286,6 +372,11 @@ h1, h2, h3, h4, h5, h6 {
 #footerwrap input {
   	margin-top: 30px;
   	margin-bottom: 30px;
+
+  	opacity: 1.0;
+  	-webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.2s;
+  	-webkit-transition-timing-function: ease-out;
 }
 
 #footerwrap input:hover {
@@ -370,6 +461,8 @@ h1, h2, h3, h4, h5, h6 {
 	background-position: center center;
 	min-height: 550px;
 	width: 100%;
+
+	overflow: hidden;
 	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -382,24 +475,95 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
-#aboutwrap h1, h2, h3, p {
+#aboutwrap h1, h2, h3, p, b {
 	color: #ffffff;
 }
 
-#aboutwrap h2 {
-	/*font-family: 'American typewriter', sans-serif;*/
-	font-size: 23px;
+#aboutwrap p {
 	margin-top: 20px;
-	font-weight: 400;
+	text-align: left;
+}
+
+#aboutwrap h1 {
+	margin-bottom: 40px;
+}
+
+#aboutwrap h2 {
+	font-size: 20px;
+	margin-top: 20px;
+	font-weight: 200;
 	text-align:left;
 }
 
+#aboutwrap h1 {
+	-webkit-transform: translate(0px, -60px);
+    -moz-transform: translate(0px, -60px);
+    -o-transform: translate(0px, -60px);
+    -ms-transform: translate(0px, -60px);
+    transform: translate(0px, -60px);
+
+	-webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
 #aboutwrap:hover h1 {
-	/*-webkit-animation: animatedBackground 1s ease-out 1;
-	-moz-animation: animatedBackground 1s ease-out 1;
-	animation: animatedBackground 1s ease-out 1;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;*/
+	-webkit-transform: translate(0px, -40px);
+    -moz-transform: translate(0px, -40px);
+    -o-transform: translate(0px, -40px);
+    -ms-transform: translate(0px, -40px);
+    transform: translate(0px, -40px);
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
+#aboutwrap h2 {
+	-webkit-transform: translate(0px, -20px);
+    -moz-transform: translate(0px, -20px);
+    -o-transform: translate(0px, -20px);
+    -ms-transform: translate(0px, -20px);
+    transform: translate(0px, -20px);
+
+	-webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
+#aboutwrap:hover h2 {
+	-webkit-transform: translate(0px, -40px);
+    -moz-transform: translate(0px, -40px);
+    -o-transform: translate(0px, -40px);
+    -ms-transform: translate(0px, -40px);
+    transform: translate(0px, -40px);
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
+#aboutwrap > .overlay {
+	position: absolute;
+	background-color: #000;
+	opacity: 0.5;
+
+	/*overflow: hidden;*/
+	/*display: block;*/
+	margin-top: -60px;
+	width: 100%;
+
+    -webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}
+
+#aboutwrap:hover > .overlay {
+	opacity: 0.0;
+
+    -webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
 }
 
 .come-in {
@@ -430,20 +594,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	/*animation: come-in 0.8s ease forwards;*/
 }
-
-/*.gallery img {
-	-webkit-transition: all 0.8s ease-in-out; 
-	-moz-transition: all 0.8s ease-in-out; 
-	-ms-transition: all 0.8s ease-in-out; 
-	-o-transition: all 0.8s ease-in-out; 
-	transition: all 0.8s ease-in-out; 
-}
-
-.gallery img:hover {
-	-webkit-opacity: 0.8;
-	-moz-opacity: 0.8;
-	opacity: 0.8;
-}*/
 
 /* --- Container configuration ---------------------------------------------------------- */
 .viewport {
@@ -479,17 +629,18 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Label configuration -------------------------------------------------------------- */
 .viewport a span {
     
-    /*font-size: 3.0em;*/
+    font-size: 1.2em;
 
     /* When NOT displaying the text on top of the image in the gallery*/
     display: none;
-    font-size: 180%;
     font-weight: bold;
+
+    /*font-size: 180%;*/
 
     /* When displaying the text on top of the image in the gallery*/
     font-size: 120%; 
-    
-    padding-top: 20%;
+
+    padding-top: 22%;
     position: absolute;
     text-align: center;
     text-decoration: none;
