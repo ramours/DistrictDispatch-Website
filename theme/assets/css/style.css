@@ -473,7 +473,23 @@ h1, h2, h3, h4, h5, h6 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
 }
+
+/*#aboutwrap:hover {
+	-webkit-transform: translate(0px, -40px);
+    -moz-transform: translate(0px, -40px);
+    -o-transform: translate(0px, -40px);
+    -ms-transform: translate(0px, -40px);
+    transform: translate(0px, -40px);
+
+    -webkit-transition-property: all;
+  	-webkit-transition-duration: 0.4s;
+  	-webkit-transition-timing-function: ease-in-out;
+}*/
 
 #aboutwrap h1, h2, h3, p, b {
 	color: #ffffff;
